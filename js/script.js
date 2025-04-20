@@ -19,12 +19,12 @@ document.addEventListener('DOMContentLoaded', ()=> {
         openModal();
     });
     modal.addEventListener('click', (e)=> {
-        if(e.target == modal || e.target.classList.contains('modal__content-close')) {
+        if(e.target === modal || e.target.classList.contains('modal__content-close')) {
             hideModal()
         }
     });
     window.addEventListener('keydown', (e)=> {
-        if(e.code === 'Escape' || modal.classList.contains('show')) {
+        if(e.code === 'Escape' || e.target.classList.contains('show')) {
             hideModal();
         }
     });
@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     //Отпрвака формы начало
         const form = document.querySelector('form');
+        bindPostData(form);
         const postData = async (url, data)=> {
             const res  = await fetch(url, {
                 method: 'POST',
@@ -56,8 +57,24 @@ document.addEventListener('DOMContentLoaded', ()=> {
         function bindPostData(form) {
             form.addEventListener('submit', (e)=> {
                 e.preventDefault();
+                const formData = new FormData(form);
+                const obj = {};
+                formData.forEach((value, key)=> {
+                    obj[key] = value;
+                });
+                postData('php/server.php', JSON.stringify(obj))
+                .then(()=> {
+                    alert('Данные успешно отправлены')
+                }).catch (()=> {
+                    alert ('Ошибка при отправке')
+                }).finally(()=> {
+                    form.reset();
+                });
             })
         }
     //Отправка формы конец
-
+    //Валидация формы начало
+    const name = document.querySelector('#name');
+    
+    // Вадация формы конец    
 })  
