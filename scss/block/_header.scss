@@ -1,0 +1,89 @@
+.header {
+    width: 100%;
+    padding: 35px 0;
+    
+    &__logo {
+        display: block;
+        width: 180px;
+        height: 38px;
+        transition: all .4s ease;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    &__wrapper {
+        @include wrapper1; 
+    }
+    &__right{
+        @include wrapperCenter;
+        gap: 20px;
+    }
+    &__suggestions {
+        &-title {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 120%;
+            text-align: right;
+            color: $darkColor;
+        }
+        &-mail {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 100%;
+            text-align: right;    
+            color: $purpleColor;  
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: $purpleColor;
+                transition: all .4s ease;
+            } 
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }   
+        }
+    }
+    &__сounseling {
+        &-title {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 120%;
+            text-align: right;
+            color: $darkColor;
+        }
+        &-phone {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 100%;
+            text-align: right;    
+            color: $purpleColor;  
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: $purpleColor;
+                transition: all .4s ease;
+            } 
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }     
+        }
+    }
+}

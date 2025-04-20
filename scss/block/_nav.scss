@@ -1,0 +1,36 @@
+.nav {
+    padding-bottom: 80px;
+    &__list {
+        padding: 16px 0 0 0;
+        border-top: 1px solid $garayColor2;
+        @include wrapper1;
+    }    
+    &__item {
+        &-link {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            color: $darkColor;
+        }
+        &-btn {
+            background-color: rgba(0, 0, 0, 0);
+            @include wrapperCenter;
+            gap: 5px;
+            height: 19px;
+            width: 157px;
+            &--icon {
+                width: 16px;
+                height: 16px;
+            }
+            &--text {
+                font-family: 'Source Sans 3', sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 120%;
+                text-transform: uppercase;
+                color: $purpleColor;
+            }
+        }
+    }
+}

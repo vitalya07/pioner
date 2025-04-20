@@ -1,0 +1,20 @@
+@mixin wrapper1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin wrapperCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin wrapperStart {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+@mixin wrapperEnd {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}

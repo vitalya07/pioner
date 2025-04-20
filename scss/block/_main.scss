@@ -1,0 +1,27 @@
+.main {
+    padding: 0 0 80px 0;
+    &__head {
+        @include wrapper1;
+        margin-bottom: 32px;
+        &-title {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 120%;
+            color: $darkColor;
+            max-width: 580px;
+        }
+        &-descr {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            color: $darkColor;
+            max-width: 380px;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+}

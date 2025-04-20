@@ -1,0 +1,64 @@
+.menu {
+    padding-bottom: 80px;
+    &__wrapper {
+        padding: 16px 0 0 0;
+        border-top: 1px solid $garayColor2;
+        @include wrapper1;
+    }
+    &__nav {
+        &-list {                     
+            @include wrapperStart;
+            gap: 40px;
+            &--item {
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    height: 2px;
+                    width: 0;
+                    background-color: $purpleColor;
+                    transition: all .4s ease;
+                }   
+                &:hover {
+                    &::before {
+                        width: 100%;
+                    }
+                } 
+                &__link {
+                    font-family: 'Source Sans 3', sans-serif;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 120%;
+                    color: $darkColor;
+                }  
+                         
+            }
+        }
+    }       
+    &__btn {
+        background-color: rgba(0, 0, 0, 0);
+       @include wrapperEnd;
+        height: 19px;
+        width: 157px;
+        transition: all .4s ease;
+        align-self: flex-end;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+        &-icon {
+            width: 16px;
+            height: 16px;
+        }
+        &-text {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            text-transform: uppercase;
+            color: $purpleColor;
+        }
+    }
+}

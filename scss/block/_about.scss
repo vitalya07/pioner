@@ -1,0 +1,36 @@
+.about {
+    padding: 0 0 80px 0;
+    &__title {
+        margin-bottom: 32px;
+        font-family: 'Source Sans 3', sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 120%;
+        color: $darkColor;
+    }
+    &__head {
+        @include wrapper1;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+    }
+    &__wrapper {
+        @include wrapper1;
+        align-items: flex-end;
+        gap: 20px;
+    }
+    &__info {
+        font-family: 'Source Sans 3', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        margin-bottom: 24px;
+        max-width: 580px;
+    }
+    &__images {
+        @include wrapper1;
+        &-img {
+            width: 580px;
+            height: auto;
+        }
+    }
+}
